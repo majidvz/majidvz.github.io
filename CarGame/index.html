@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="car"></div>
+    </main>
+
+    <script>
+      const car = document.getElementsByClassName("car")[0];
+      let flag = true;
+
+      //   setInterval(() => {
+      //     if (flag) {
+      //       flag = false;
+      //     } else {
+      //       car.classList.remove("right");
+      //       flag = true;
+      //     }
+      //   }, 2000);
+
+      window.addEventListener("keyup", (e) => {
+        console.log(e.keyCode);
+
+        if (e.keyCode === 39) {
+          car.classList.add("right");
+        } else if (e.keyCode === 37) {
+          car.classList.remove("right");
+        }
+      });
+    </script>
+  </body>
+</html>
