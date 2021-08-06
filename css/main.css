@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro .intro-img,
+.title,
+.subtitle,
+.social-media .social-title {
+  transition: 0.25s all ease;
+}
+
+.title:not(:hover),
+.subtitle:not(:hover),
+.social-media .social-title:not(:hover) {
+  letter-spacing: 0;
+}
+
+.title:hover,
+.subtitle:hover,
+.social-media .social-title:hover {
+  letter-spacing: 5px;
+}
+
+@keyframes object {
+  from {
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.intro {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.intro .intro-img {
+  border-radius: 100%;
+  margin-bottom: 25px;
+  animation: object 1s ease 0s 1 normal;
+}
+
+.intro .intro-img:not(:hover) {
+  transform: translateY(0);
+}
+
+.intro .intro-img:hover {
+  transform: translateY(-10px);
+}
+
+.title,
+.subtitle,
+.description {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.title {
+  animation: object 1.5s ease 0s 1 normal;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 12.5px;
+}
+
+.subtitle {
+  animation: object 2s ease 0s 1 normal;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 767.99px) {
+  .intro {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .intro {
+    width: 400px;
+  }
+}
+.social-media {
+  animation: object 2.5s ease 0s 1 normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.social-media .social-title {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-bottom: 12.5px;
+}
+
+.social-media .links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.social-media .links > .social-link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  text-decoration: none;
+  transition: 0.25s all ease;
+}
+
+.social-media .links > .social-link:not(:hover) {
+  color: #000;
+}
+
+.social-media .links > .social-link.github:hover {
+  color: #333;
+}
+
+.social-media .links > .social-link.codepen:hover {
+  color: #ae63e4;
+}
+
+.social-media .links > .social-link.linkedin:hover {
+  color: #0077b5;
+}
+
+.social-media .links > .social-link.twitter:hover {
+  color: #1da1f2;
+}
+
+.social-media .links > .social-link.instagram:hover {
+  color: #c13584;
+}
+
+.social-media .links > .social-link:not(:last-child) {
+  margin-right: 20px;
+}
