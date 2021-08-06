@@ -1,0 +1,59 @@
+.social-media {
+  animation: object 2.5s ease 0s 1 normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.social-media .social-title {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-bottom: 12.5px;
+}
+
+.social-media .links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.social-media .links > .social-link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  text-decoration: none;
+  transition: 0.25s all ease;
+}
+
+.social-media .links > .social-link:not(:hover) {
+  color: #000;
+}
+
+.social-media .links > .social-link.github:hover {
+  color: #333;
+}
+
+.social-media .links > .social-link.codepen:hover {
+  color: #ae63e4;
+}
+
+.social-media .links > .social-link.linkedin:hover {
+  color: #0077b5;
+}
+
+.social-media .links > .social-link.twitter:hover {
+  color: #1da1f2;
+}
+
+.social-media .links > .social-link.instagram:hover {
+  color: #c13584;
+}
+
+.social-media .links > .social-link:not(:last-child) {
+  margin-right: 20px;
+}
